@@ -1,4 +1,4 @@
-name: Github Tools
+name: "@finleyge/github-tools"
 description: A GitHub Actions Toolkit
 author: FinleyGe
 inputs:
