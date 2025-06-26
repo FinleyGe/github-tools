@@ -12,6 +12,6 @@
     "@actions/github": "^6.0.1"
   },
   "scripts": {
-    "build": "bun build --minify --target=node --outdir=dist src/index.ts"
+    "build": "bun build --target=node --outdir=dist src/index.ts"
   }
 }
