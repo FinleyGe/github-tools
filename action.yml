@@ -1,0 +1,16 @@
+name: Github Tools
+description: A GitHub Actions Toolkit
+author: FinleyGe
+inputs:
+  tool:
+    description: Tool Name
+    required: true
+  title:
+    description: Title of the comment
+    required: false
+  body:
+    description: Body of the comment
+    required: true
+runs:
+  using: node20
+  main: dist/index.js

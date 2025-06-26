@@ -1,0 +1,27 @@
+name: Test PR Comment Bot
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run comment bot script
+        uses: ./
+        with:
+          tool: issue-comment
+          title: Test PR Comment Bot
+          body: This is a test comment
