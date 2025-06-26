@@ -2,8 +2,12 @@ import core from "@actions/core";
 import { createOrUpdatePRComment } from "./issue-comment";
 
 async function main() {
-  const params = core.getInput("params", { required: false });
+  core.debug("running action");
   const tool = core.getInput("tool", { required: true });
+  if (!tool) {
+    core.setFailed("tool is required");
+    return;
+  }
 
   switch (tool) {
     case "issue-comment":
@@ -16,5 +20,6 @@ async function main() {
 }
 
 main().catch((error) => {
+  core.debug(error);
   core.setFailed(error);
 });

@@ -22,6 +22,7 @@ jobs:
       - name: Run comment bot script
         uses: ./
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           tool: issue-comment
           title: Test PR Comment Bot
           body: This is a test comment

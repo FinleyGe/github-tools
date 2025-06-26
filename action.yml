@@ -2,6 +2,9 @@ name: Github Tools
 description: A GitHub Actions Toolkit
 author: FinleyGe
 inputs:
+  token:
+    description: GitHub Token
+    required: true
   tool:
     description: Tool Name
     required: true
